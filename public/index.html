@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gemini AI Chatbot</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <div class="container">
-    <h1>Gemini AI Chatbot</h1>
-    <div id="chat-box" class="chat-box"></div>
-    <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required />
-      <button type="submit">Send</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taylor Otwell</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#373632]">
+    <div class="container">
+      <header class="pb-5 flex items-center gap-3">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="tailor-otwell"
+          class="rounded-full aspect-square w-12 h-12"
+        />
+        <div class="flex flex-col gap-0">
+          <h1 class="text-lg text-[#FDFDFC]">Taylor Otwell</h1>
+          <span class="text-xs text-green-500">• online</span>
+        </div>
+      </header>
+      <div id="chat-box" class="chat-box"></div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          class="text-white rounded-md"
+          placeholder="Type your message..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="bg-white text-black px-5 rounded-md">
+          Send
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
