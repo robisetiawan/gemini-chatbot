@@ -115,7 +115,7 @@ app.post("/chat", async (req, res) => {
     });
 
     const aiResponse = await ai.models.generateContent({
-      model: determineGeminiModel("pro"),
+      model: determineGeminiModel("flash"),
       contents: payload,
       config: {
         systemInstruction:
