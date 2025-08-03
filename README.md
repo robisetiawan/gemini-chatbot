@@ -1,52 +1,55 @@
-# Chatbot Laravel dengan Gemini AI
+# Laravel Chatbot with Gemini AI
 
-Proyek ini adalah contoh implementasi chatbot sederhana yang didukung oleh model AI Gemini. Chatbot ini dirancang untuk berfungsi sebagai asisten ahli khusus dalam framework Laravel, dengan persona layaknya Taylor Otwell, kreator Laravel.
+This project is an example of a simple chatbot implementation powered by the Gemini AI model. The chatbot is designed to function as an expert assistant for the Laravel framework, with a persona modeled after Taylor Otwell, the creator of Laravel.
 
-### Model AI yang Digunakan
+### AI Model Used
 
-Chatbot ini dibangun menggunakan model **Gemini 1.5 Pro** dari Google. Model ini dipilih karena kemampuannya yang canggih dalam pemahaman konteks, penalaran, dan efisiensi dalam menjawab pertanyaan spesifik, menjadikannya ideal untuk peran asisten teknis.
+This chatbot is built using Google's **gemini-2.5-flash** model. This model was chosen for its advanced capabilities in context understanding, reasoning, and efficiency in answering specific questions, making it ideal for the role of a technical assistant.
 
-### Peran AI dalam Chatbot Ini
+### The Role of AI in This Chatbot
 
-Peran utama AI dalam chatbot ini adalah sebagai **konsultan ahli Laravel**. Melalui `systemInstruction` yang telah ditentukan, AI dilatih untuk:
+The primary role of the AI in this chatbot is as a **Laravel expert consultant**. Through the defined `systemInstruction`, the AI is trained to:
 
-* Berperan sebagai **Taylor Otwell**, kreator Laravel.
-* Menjawab semua pertanyaan seputar framework Laravel.
-* Membantu menyelesaikan masalah dan error dalam kode Laravel.
-* Memberikan solusi yang akurat, singkat, dan langsung pada intinya.
-* Menolak dengan sopan pertanyaan yang berada di luar konteks Laravel dan mengalihkan kembali percakapan ke topik yang relevan.
+* Act as **Taylor Otwell**, the creator of Laravel.
+* Answer all questions about the Laravel framework.
+* Help solve problems and errors in Laravel code.
+* Provide accurate, concise, and direct solutions.
+* Politely decline questions that are outside the context of Laravel and redirect the conversation back to the relevant topic.
 
-Dengan peran ini, chatbot dapat memberikan dukungan yang terfokus dan berharga bagi para developer Laravel.
+With this role, the chatbot can provide focused and valuable support for Laravel developers.
 
-### Cara Instalasi
+### Installation
 
-Ikuti langkah-langkah di bawah ini untuk menjalankan proyek secara lokal.
+Follow the steps below to run the project locally.
 
-#### Prasyarat
+#### Prerequisites
 
-Pastikan Anda sudah menginstal:
+Make sure you have installed:
 
-* Node.js dan npm
-* Kunci API Gemini (dapat diperoleh dari Google AI Studio)
+* Node.js and npm
+* A Gemini API key (can be obtained from Google AI Studio)
 
-#### Langkah-langkah
+#### Steps
 
-1.  **Clone repository ini**:
+1.  **Clone this repository**:
     ```bash
     git clone https://github.com/robisetiawan/gemini-chatbot.git
-    cd nama-repo-anda
+    cd gemini-chatbot
     ```
-2.  **Instal dependensi Node.js**:
+
+2.  **Install Node.js dependencies**:
     ```bash
     npm install
     ```
-3.  **Buat file konfigurasi**:
-    Buat file `.env` di root direktori dan tambahkan kunci API Gemini Anda, dan bisa didapatkan di https://aistudio.google.com:
+
+3.  **Create a configuration file**:
+    Create a `.env` file in the root directory and add your Gemini API key, which you can get from https://aistudio.google.com :
     ```
     GEMINI_API_KEY=YOUR_API_KEY
     ```
-4.  **Jalankan aplikasi**:
+
+4.  **Run the application**:
     ```bash
     node index.js
     ```
-    Aplikasi akan berjalan pada `http://localhost:3000`. Anda bisa menguji endpoint `/chat` dengan mengirimkan permintaan POST yang berisi pesan dari pengguna.
+    The application will run on `http://localhost:3000`. You can test the `/chat` endpoint by sending a POST request containing a user's message.
